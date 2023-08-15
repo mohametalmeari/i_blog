@@ -12,10 +12,23 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
   end
 
+  it 'return last three posts' do
+    user_jack = User.create(name: 'Jack', photo: 'https://', bio: 'Teacher from USA.')
+
+    Post.create(author: user_jack, title: 'JS', text: 'JS Details')
+    Post.create(author: user_jack, title: 'React', text: 'React Details')
+    Post.create(author: user_jack, title: 'Rails', text: 'Rails Details')
+    Post.create(author: user_jack, title: 'HTML', text: 'HTML Details')
+
+    expect(user_jack.three_most_recent_posts.length).to be 3
+  end
+
   it 'updates posts counter' do
     user_jack = User.create(name: 'Jack', photo: 'https://', bio: 'Teacher from USA.')
-    first_post = Post.create(author: user_jack, title: 'JS', text: 'JS Details')
-    second_post = Post.create(author: user_jack, title: 'React', text: 'React Details')
+
+    Post.create(author: user_jack, title: 'JS', text: 'JS Details')
+    Post.create(author: user_jack, title: 'React', text: 'React Details')
+
     user_jack.update_posts_counter
     expect(user_jack.posts_counter).to be 2
   end
