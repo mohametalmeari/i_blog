@@ -35,7 +35,7 @@
 
 **Blog App** is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-<img src="./assets/catalog_of_my_things.png" alt="UML class diagram"/>
+<img src="./app/assets/images/blog_app_erd.png" alt="UML class diagram"/>
 
 ## 🛠 Built With <a name="built-with"></a>
 
