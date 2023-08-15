@@ -60,3 +60,26 @@ Comment.create(post: first_post, author: user_tom, text: 'Manipulates HTML/CSS c
 Comment.create(post: first_post, author: user_lilly, text: 'Event-driven programming model' )
 Comment.create(post: first_post, author: user_lilly, text: 'Supports asynchronous operations' )
 Comment.create(post: first_post, author: user_lexa, text: 'Extensive third-party libraries' )
+
+# Call methods:
+# For User
+User.find_by(name: 'Tom').three_most_recent_posts
+
+# For Post
+User.find_by(name: 'Tom').update_posts_counter
+User.find_by(name: 'Lilly').update_posts_counter
+User.find_by(name: 'Lexa').update_posts_counter
+
+# For Like
+Post.find_by(title: 'JS').update_likes_counter
+Post.find_by(title: 'React').update_likes_counter
+Post.find_by(title: 'Ruby').update_likes_counter
+Post.find_by(title: 'RoR').update_likes_counter
+
+# For Comment
+Post.find_by(title: 'JS').update_comments_counter
+Post.find_by(title: 'React').update_comments_counter
+Post.find_by(title: 'Ruby').update_comments_counter
+Post.find_by(title: 'RoR').update_comments_counter
+
+Post.find_by(title: 'JS').five_most_recent_comments
