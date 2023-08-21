@@ -16,7 +16,7 @@
 
 .content {
   background-color: yellow;
-  min-width: 80%;
+  width: 80%;
   flex-grow: 1;
 }
 
@@ -47,4 +47,17 @@
 
 .user-card .posts-num {
   align-self: flex-end;
+}
+
+.user-info {
+  background: green ;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.all-posts-btn{
+  padding: 4px;
+  width: fit-content;
+  border: solid 1px red;
 }

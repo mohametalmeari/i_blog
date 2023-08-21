@@ -1,1 +1,14 @@
 <h2>User's Page</h2>
+<%= render partial: "shared/user_card", locals: { user: @user } %>
+<div class="user-info">
+  <section class="bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio%></p>
+  </section>
+  <section class="posts-list">
+    <% @posts.each do |post|%>
+      <%= render partial: "shared/post_card", locals: { post: post } %>
+    <%end%>
+  </section>
+  <%= link_to "See all posts", user_posts_path(user_id: @user.id), class: "all-posts-btn"%>
+</div>
