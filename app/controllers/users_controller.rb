@@ -2,9 +2,7 @@ class UsersController < ApplicationController
   layout 'standard'
   def index
     @users = User.all
-    @users.each do |user|
-      user.update_posts_counter
-    end
+    @users.each(&:update_posts_counter)
     render status: 200
   end
 
