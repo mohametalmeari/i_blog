@@ -1,0 +1,12 @@
+<%= form_with model: @new_post, url: create_post_path do |form| %>
+  <%= form.label :title %>: 
+  <%= form.text_field :title %><br>
+  <%= form.text_area :text, size: "70x5" %><br>
+  <%= form.submit "Create Post" %>
+<% end %>
+
+<% if flash[:error] %>
+  <div class="error-message">
+    <%= flash[:error] %>
+  </div>
+<% end %>
