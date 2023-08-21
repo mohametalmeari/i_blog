@@ -5,6 +5,7 @@ RSpec.describe 'Users', type: :request do
       get '/users'
       expect(response.body).to include('<h2>List of Users</h2>')
       expect(response.status).to eq(200)
+      expect(response).to render_template(:index)
     end
   end
 
@@ -13,6 +14,7 @@ RSpec.describe 'Users', type: :request do
       get '/users/13'
       expect(response.body).to include('<h2>User\'s Page</h2>')
       expect(response.status).to eq(200)
+      expect(response).to render_template(:show)
     end
   end
 end
