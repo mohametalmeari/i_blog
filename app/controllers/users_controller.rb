@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  def index; end
+  def index
+    render status: 200
+  end
 
-  def show; end
+  def show
+    render status: 200
+  end
 end
