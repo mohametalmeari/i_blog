@@ -2,7 +2,7 @@
 <%= render partial: "shared/user_card", locals: { user: @user } %>
 <div class="posts-list">
   <% @posts.each do |post|%>
-    <section>
+    <section class = "post-info">
       <%= render partial: "shared/post_card", locals: { post: post } %>
       <% comments = Comment.where(post: post.id).last(3) %>
       <% comments.each do |comment|%>

@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @user = User.find(@post.author_id)
+    @comments = Comment.where(post: @post.id)
     render status: 200
   end
 end

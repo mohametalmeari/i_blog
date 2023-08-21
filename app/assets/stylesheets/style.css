@@ -50,13 +50,13 @@
 }
 
 .user-info {
-  background: green ;
+  background: green;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.all-posts-btn{
+.all-posts-btn {
   padding: 4px;
   width: fit-content;
   border: solid 1px red;
@@ -72,3 +72,22 @@
   display: flex;
   gap: 1rem;
 }
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 1rem;
+  border: solid 1px red;
+}
+
+.post-info {
+  border: solid 1px red;
+  padding: 1rem;
+}
+
+.post-card .counters {
+  align-self: flex-end;
+  font-size: 12px;
+}
+
