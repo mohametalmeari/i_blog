@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = Post.where(author: @user).last(3)
+    @posts = @user.three_most_recent_posts
     render status: 200
   end
 end

@@ -4,7 +4,7 @@
   <% @posts.each do |post|%>
     <section class = "post-info">
       <%= render partial: "shared/post_card", locals: { post: post } %>
-      <% comments = Comment.where(post: post.id).last(3) %>
+      <% comments = post.five_most_recent_comments %>
       <% comments.each do |comment|%>
         <% user = User.find(comment.author_id)%>
         <%= render partial: "shared/comment", locals: { comment: comment, user: user } %>
