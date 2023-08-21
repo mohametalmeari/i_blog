@@ -1,2 +1,4 @@
 <h2>List of Users</h2>
-<%= render "shared/user_card"%>
+<% @users.each do |user|%>
+  <%= render partial: "shared/user_card", locals: { user: user } %>
+<%end%>
