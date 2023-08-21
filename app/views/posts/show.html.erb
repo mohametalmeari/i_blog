@@ -6,3 +6,11 @@
     <%= render partial: "shared/comment", locals: { comment: comment, user: user } %>
   <%end%>
 </div>
+<%= form_with model: @new_comment, url: create_comment_path do |form| %>
+  <%= form.text_area :text, size: "70x5" %><br>
+  <%= form.submit "Comment" %>
+<% end %>
+<br>
+<%= form_with model: @new_like, url: create_like_path do |form| %>
+  <%= form.submit "Like" %>
+<% end %>
