@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout 'standard'
   def index
     render status: 200
   end

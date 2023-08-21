@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.content {
+  background-color: yellow;
+  min-width: 80%;
+  flex-grow: 1;
+}
+
+.user-card {
+  padding: 1rem;
+  width: 100%;
+  background: blue;
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.user-card .user-img {
+  width: 10rem;
+}
+
+.user-card .info {
+  display: flex;
+  width: 100%;
+  background: red;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.user-card .name {
+  font-size: 24px;
+}
+
+.user-card .posts-num {
+  align-self: flex-end;
+}
