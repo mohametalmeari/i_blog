@@ -1,6 +1,8 @@
 <h2>Post</h2>
-<%= render partial: "shared/post", locals: { post: @post, user: @user} %>
-<% @comments.each do |comment|%>
-  <% user = User.find(comment.author_id)%>
-  <%= render partial: "shared/comment", locals: { comment: comment, user: user } %>
-<%end%>
+<div class="post-container">
+  <%= render partial: "shared/post", locals: { post: @post, user: @user} %>
+  <% @comments.each do |comment|%>
+    <% user = User.find(comment.author_id)%>
+    <%= render partial: "shared/comment", locals: { comment: comment, user: user } %>
+  <%end%>
+</div>
