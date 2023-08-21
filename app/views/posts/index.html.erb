@@ -1,1 +1,14 @@
 <h2>List of Posts</h2>
+<%= render partial: "shared/user_card", locals: { user: @user } %>
+<div class="posts-list">
+  <% @posts.each do |post|%>
+    <section>
+      <%= render partial: "shared/post_card", locals: { post: post } %>
+      <% comments = Comment.where(post: post.id).last(3) %>
+      <% comments.each do |comment|%>
+        <% user = User.find(comment.author_id)%>
+        <%= render partial: "shared/comment", locals: { comment: comment, user: user } %>
+      <%end%>
+    </section>
+  <%end%>
+</div>
