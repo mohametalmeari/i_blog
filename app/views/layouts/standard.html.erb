@@ -9,7 +9,9 @@
   <body>
     <div class = "container">
       <header>
-        <h1>i Bolg</h1>
+        <%= link_to users_path do %>
+          <h1>i Bolg</h1>
+        <% end %>
       </header>
       <div class = "content">
         <%= yield -%>
