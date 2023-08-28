@@ -24,7 +24,7 @@ class UsersTest < ApplicationSystemTestCase
     visit 'users'
     click_on 'Tom'
     assert_text "User's Page"
-    assert_text "Tom"
+    assert_text 'Tom'
   end
   test 'user profile image' do
     visit 'users/1'

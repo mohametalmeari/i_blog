@@ -84,5 +84,4 @@ class PostsTest < ApplicationSystemTestCase
     assert_text "Lilly:\nSupports asynchronous operations"
     assert_text "Lexa:\nExtensive third-party libraries"
   end
-
 end
