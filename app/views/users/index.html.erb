@@ -2,3 +2,4 @@
 <% @users.each do |user|%>
   <%= render partial: "shared/user_card", locals: { user: user } %>
 <%end%>
+<%= link_to "Create New Post", new_path, class: "new-post-btn"%>
