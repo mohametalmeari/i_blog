@@ -1,7 +1,7 @@
 <%= link_to user_post_path(user_id: post.author_id, id: post.id ) do %>
   <div class="post-card">
     <h3 class="title"><%= post.title%></h3>
-    <p><%= post.text%></p>
+    <p><%= truncate(post.text, length: 100)%></p>
     <span class="counters">Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%></span>
   </div>
 <% end %>
