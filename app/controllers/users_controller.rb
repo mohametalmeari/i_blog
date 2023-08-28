@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.includes(:posts).find(params[:id]) # N+1
     @user.update_posts_counter
     @posts = @user.three_most_recent_posts
     @posts.each do |post|

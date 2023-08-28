@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   layout 'standard'
   def index
-    @user = User.find(params[:user_id])
+    @user = User.includes(:posts).find(params[:user_id]) # N+1
     @user.update_posts_counter
     @posts = Post.where(author: @user)
     @posts.each do |post|
@@ -15,10 +15,10 @@ class PostsController < ApplicationController
     @new_comment = Comment.new
     @new_like = Like.new
 
-    @post = Post.find(params[:id])
+    @post = Post.includes(:comments).find(params[:id]) # N+1
     @post.update_comments_counter
     @post.update_likes_counter
-    @user = User.find(@post.author_id)
+    @user = @post.author
     @comments = Comment.where(post: @post.id)
     render status: 200
   end
