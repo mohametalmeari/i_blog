@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+h2 {
+  margin-bottom: 1rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -25,8 +29,18 @@
   display: flex;
   align-items: stretch;
   gap: 1rem;
-  border: solid 1px blue;
+  border: solid 1px skyblue;
+  box-shadow: 0 0 4px 1px skyblue;
   margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.user-card:hover {
+  background-color: rgb(255, 228, 232);
+}
+
+.user-card:active {
+  background-color: pink;
 }
 
 .user-card .user-img {
@@ -37,11 +51,13 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 .user-card .name {
+  display: flex;
+  align-items: center;
   font-size: 24px;
+  flex-grow: 2;
 }
 
 .user-card .posts-num {
@@ -76,7 +92,11 @@
   flex-direction: column;
   gap: 4px;
   padding: 1rem;
-  border: solid 1px red;
+  border: solid 1px blue;
+  box-shadow: 2px 2px 4px lightblue;
+}
+.post-card:hover {
+background: rgb(194, 219, 227);
 }
 
 .post-info {
@@ -102,4 +122,60 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.ignored {
+  display: contents;
+}
+
+.comment-like-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.comment-field {
+  width: 100%;
+  resize: vertical;
+  min-height: 5rem;
+  margin-bottom: 1rem;
+  padding: 8px;
+  border: none;
+  background: lightseagreen;
+  color: white;
+}
+
+.comment-field:focus {
+  background: rgba(127, 255, 212, 0.788);
+  border: none;
+  outline: solid 1px yellowgreen;
+  color: darkgreen;
+}
+
+.comment-btn {
+  flex: 1;
+  margin-right: 1rem;
+  padding: 8px;
+}
+
+.like-btn {
+  flex: 1;
+  margin-left: 1rem;
+  padding: 8px;
+}
+
+[class$="-btn"] {
+  border: solid 2px green;
+  background-color: lightgreen;
+  color: green;
+}
+
+[class$="-btn"]:hover {
+  border: solid 2px lightgreen;
+  background-color: green;
+  color: lightgreen;
+}
+
+[class$="-btn"]:active {
+  background-color: rgb(1, 55, 1);
 }
