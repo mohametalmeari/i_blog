@@ -109,14 +109,13 @@
   align-items: stretch;
   flex-direction: column;
   width: 50%;
-  /* gap: 1rem; */
 }
 
 .login-btn {
   width: 100%;
 }
 
-.field>* {
+.field > * {
   width: 100%;
   padding: 4px;
 }
