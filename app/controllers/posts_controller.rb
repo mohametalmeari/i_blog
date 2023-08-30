@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   layout 'standard'
 
   load_and_authorize_resource
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_path, notice: 'Access denied' 
+  rescue_from CanCan::AccessDenied do |_exception|
+    redirect_to root_path, notice: 'Access denied'
   end
 
 
@@ -54,30 +54,30 @@ class PostsController < ApplicationController
     @post_likes = @del_post.likes
     @post_likes.destroy_all
     @del_post.destroy
-    redirect_to users_path, notice: "Post was successfully destroyed."
+    redirect_to users_path, notice: 'Post was successfully destroyed.'
   end
 
-  def create_comment
-    puts 'LOG..'
+  # def create_comment
+  #   puts 'LOG..'
 
-    @new_comment = Comment.new(comment_params)
-    puts @new_comment
-    @new_comment.post = Post.find(params[:id])
-    @new_comment.author = current_user
+  #   @new_comment = Comment.new(comment_params)
+  #   puts @new_comment
+  #   @new_comment.post = Post.find(params[:id])
+  #   @new_comment.author = current_user
 
-    @new_comment.save
-    redirect_to request.referrer
-  end
+  #   @new_comment.save
+  #   redirect_to request.referrer
+  # end
 
-  def create_like
-    @new_like = Like.new
-    @new_like.post = Post.find(params[:id])
-    @new_like.author = current_user
+  # def create_like
+  #   @new_like = Like.new
+  #   @new_like.post = Post.find(params[:id])
+  #   @new_like.author = current_user
 
-    @new_like.save
-    # Redirect to the same page
-    redirect_to request.referrer
-  end
+  #   @new_like.save
+  #   # Redirect to the same page
+  #   redirect_to request.referrer
+  # end
 
   private
 
@@ -85,7 +85,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :text)
   end
 
-  def comment_params
-    params.require(:comment).permit(:text)
-  end
+  # def comment_params
+  #   params.require(:comment).permit(:text)
+  # end
 end
