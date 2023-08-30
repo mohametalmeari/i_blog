@@ -13,6 +13,9 @@
           <h1>i Bolg</h1>
         <% end %>
       </header>
+      <h2>My Username: <%= current_user.name%></h2>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <div class = "content">
         <%= yield -%>
       </div>

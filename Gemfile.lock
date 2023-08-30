@@ -281,7 +281,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  cancancan
+  cancancan (~> 3.5)
   capybara
   database_cleaner
   debug

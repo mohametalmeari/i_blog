@@ -1,5 +1,7 @@
 <h2>New post is being created by <i> <%= @user.name %> </i> </h2>
 <%= form_with model: @new_post, url: create_post_path do |form| %>
+<%puts 'Log>>'%>
+<%puts create_post_path%>
   <%= form.label :title %>: 
   <%= form.text_field :title %><br>
   <%= form.text_area :text, size: "70x5" %><br>
