@@ -40,6 +40,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @del_post = Post.find(params[:id])
+    @post_comments = @del_post.comments
+    @post_comments.destroy_all
+    @post_likes = @del_post.likes
+    @post_likes.destroy_all
+    @del_post.destroy
+    redirect_to users_path, notice: "Post was successfully destroyed."
+  end
+
   def create_comment
     comment_params = params.require(:comment).permit(:text)
     @new_comment = Comment.new(comment_params)

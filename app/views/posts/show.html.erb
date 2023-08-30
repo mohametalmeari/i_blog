@@ -7,3 +7,5 @@
     <%= render partial: "shared/comment", locals: { comment: comment, user: user } %>
   <%end%>
 </div>
+
+<%= button_to "Destroy this post", @del_post, method: :delete %> <%# didn't use path coz the destroy method of the post is in the same controller%>

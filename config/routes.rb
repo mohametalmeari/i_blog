@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'users/:user_id/posts/:id/create_like', to: 'posts#create_like', as: 'create_like'
   root 'users#index'
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts
   end
+  resources :comments, only: [:destroy]
 end
