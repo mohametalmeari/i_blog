@@ -47,7 +47,7 @@ class PostsController < ApplicationController
     @post_likes = @del_post.likes
     @post_likes.destroy_all
     @del_post.destroy
-    redirect_to users_path, notice: "Post was successfully destroyed."
+    redirect_to users_path, notice: 'Post was successfully destroyed.'
   end
 
   def create_comment
