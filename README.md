@@ -1,5 +1,4 @@
 <a name="readme-top"></a>
-
 <div align="center">
   <img src="./app/assets/images/logo.png" alt="logo" width="140"  height="auto"/>
   <br/>
@@ -83,23 +82,28 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
+
 ```sh
   cd my-folder
   git https://github.com/mohametalmeari/i_blog.git
 ```
 
+
 ### Install
 
 Install this project with:
+
 
 ```sh
   cd my-things
   bundle install
 ```
 
+
 ### Usage
 
 To run the project, execute the following command:
+
 
 ```sh
   rails server
@@ -124,11 +128,6 @@ To run tests, run the following command:
 - GitHub: [@mohametalmeari](https://github.com/mohametalmeari)
 - Twitter: [@MohametAlmeari](https://twitter.com/MohametAlmeari)
 - LinkedIn: [mohamet-almeari](https://www.linkedin.com/in/mohamet-almeari)
-
-👤 **Tamara**
-
-- GitHub: [@TamaraDimov](https://github.com/TamaraDimov)
-- LinkedIn: [Tamara Dimov](https://www.linkedin.com/in/tamara-dimov-b85139a2/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

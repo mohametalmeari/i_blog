@@ -56,35 +56,9 @@ class PostsController < ApplicationController
     redirect_to users_path, notice: 'Post was successfully destroyed.'
   end
 
-  # def create_comment
-  #   puts 'LOG..'
-
-  #   @new_comment = Comment.new(comment_params)
-  #   puts @new_comment
-  #   @new_comment.post = Post.find(params[:id])
-  #   @new_comment.author = current_user
-
-  #   @new_comment.save
-  #   redirect_to request.referrer
-  # end
-
-  # def create_like
-  #   @new_like = Like.new
-  #   @new_like.post = Post.find(params[:id])
-  #   @new_like.author = current_user
-
-  #   @new_like.save
-  #   # Redirect to the same page
-  #   redirect_to request.referrer
-  # end
-
   private
 
   def post_params
     params.require(:post).permit(:title, :text)
   end
-
-  # def comment_params
-  #   params.require(:comment).permit(:text)
-  # end
 end
