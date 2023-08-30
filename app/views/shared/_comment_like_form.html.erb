@@ -1,9 +1,9 @@
 <div class="comment-like-form-container">
-    <%= form_with model: @new_comment, url: create_comment_path, class: "ignored" do |form| %>
-      <%= form.text_area :text, size: "70x5", class: "comment-field" %><br>
-      <%= form.submit "Comment", class: "comment-btn" %>
-    <% end %>
-    <%= form_with model: @new_like, url: create_like_path, class: "ignored" do |form| %>
-      <%= form.submit "Like", class: "like-btn" %>
-    <% end %>
+  <%= form_with model: @new_comment, url: create_comment_path(@post), class: "ignored" do |form| %>
+    <%= form.text_area :text, size: "70x5", class: "comment-field" %><br>
+    <%= form.submit "Comment", class: "comment-btn" %>
+  <% end %>
+  <%= form_with model: @new_like, url: create_like_path(@post), class: "ignored" do |form| %>
+    <%= form.submit "Like", class: "like-btn" %>
+  <% end %>
 </div>
