@@ -1,4 +1,6 @@
 <div class="comment">
   <h4 class="commentor"><%= user.name%>: </h4>
   <p><%= comment.text%></p>
+  <%# used path coz the destroy method of the comment is not in the same controller of post#show, and needs route%>
+  <%= button_to "Destroy this comment", comment_path(comment), method: :delete %> <%# we can use only (comment) instead of (comment.id) and rails will understand%>
 </div>
