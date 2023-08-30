@@ -6,7 +6,6 @@ class PostsController < ApplicationController
     redirect_to root_path, notice: 'Access denied'
   end
 
-
   def index
     @user = User.includes(:posts).find(params[:user_id]) # N+1
     @user.update_posts_counter

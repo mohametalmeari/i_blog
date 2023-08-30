@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
     redirect_to root_path, notice: 'Access denied'
   end
 
-
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
