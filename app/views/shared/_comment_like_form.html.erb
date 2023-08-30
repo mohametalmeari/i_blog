@@ -1,5 +1,4 @@
 <div class="comment-like-form-container">
-<%= create_like_path(@post) %>
   <%= form_with model: @new_comment, url: create_comment_path(@post), class: "ignored" do |form| %>
     <%= form.text_area :text, size: "70x5", class: "comment-field" %><br>
     <%= form.submit "Comment", class: "comment-btn" %>
