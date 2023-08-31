@@ -58,7 +58,8 @@ paths:
                     type: string
                   text:
                     type: string
-                  author: {}
+                  author:
+                    type: object
                   comments:
                     type: object
                     properties:
@@ -80,7 +81,8 @@ paths:
                     type: string
                   text:
                     type: string
-                  author: {}
+                  author:
+                    type: object
                   comments:
                     type: object
                     properties:

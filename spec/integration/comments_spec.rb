@@ -37,7 +37,7 @@ describe 'Comments API' do
                  id: { type: :integer },
                  title: { type: :string },
                  text: { type: :string },
-                 author: {},
+                 author: {type: :object},
                  comments: { type: :object,
                              properties: {
                                id: { type: :integer },
