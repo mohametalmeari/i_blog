@@ -15,6 +15,12 @@ class PostsController < ApplicationController
       post.update_likes_counter
     end
     render status: 200
+
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @posts }
+      format.json { render json: @posts }
+    end
   end
 
   def show
@@ -27,6 +33,12 @@ class PostsController < ApplicationController
     @user = @post.author
     @comments = Comment.where(post: @post.id)
     render status: 200
+    
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @post.comments }
+      format.json { render json: @post.comments }
+    end
   end
 
   def new
