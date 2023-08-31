@@ -1,30 +1,27 @@
 require 'swagger_helper'
 
 describe 'Posts API' do
-
   path '/api/v1/users/{id}' do
-
     get "Retrieves a user's posts" do
       tags 'Posts'
       produces 'application/json', 'application/xml'
-      parameter name: :id, :in => :path, :type => :string
+      parameter name: :id, in: :path, type: :string
 
       response '200', 'user found' do
         schema type: :object,
-          properties: {
-            id: { type: :integer, },
-            name: { type: :string },
-            bio: { type: :string },
-            photo: { type: :string },
-            posts: { type: :object,
-              properties: {
-              id: { type: :integer, },
-              title: { type: :string },
-              text: { type: :string },
-              },
-            },
-          },
-          required: [ 'id', 'name', 'posts' ]
+               properties: {
+                 id: { type: :integer },
+                 name: { type: :string },
+                 bio: { type: :string },
+                 photo: { type: :string },
+                 posts: { type: :object,
+                          properties: {
+                            id: { type: :integer },
+                            title: { type: :string },
+                            text: { type: :string }
+                          } }
+               },
+               required: %w[id name posts]
 
         let(:id) { Post.create(title: 'React', author_id: 1, text: 'Details...').id }
         run_test!

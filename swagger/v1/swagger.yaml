@@ -58,17 +58,7 @@ paths:
                     type: string
                   text:
                     type: string
-                  author:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                      name:
-                        type: string
-                      bio:
-                        type: string
-                      photo:
-                        type: string
+                  author: {}
                   comments:
                     type: object
                     properties:
@@ -90,17 +80,7 @@ paths:
                     type: string
                   text:
                     type: string
-                  author:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                      name:
-                        type: string
-                      bio:
-                        type: string
-                      photo:
-                        type: string
+                  author: {}
                   comments:
                     type: object
                     properties:
