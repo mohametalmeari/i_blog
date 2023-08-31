@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   devise_for :users
   get 'users/new', to: 'posts#new', as: 'new'
   post 'users/new', to: 'posts#create', as: 'create_post'
