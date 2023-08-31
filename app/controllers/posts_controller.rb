@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @user = @post.author
     @comments = Comment.where(post: @post.id)
     render status: 200
-    
+
     respond_to do |format|
       format.html
       format.xml { render xml: @post.comments }
