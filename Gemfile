@@ -54,6 +54,7 @@ group :development, :test do
   gem 'rspec-rails'
 end
 gem 'rswag'
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
@@ -79,3 +80,5 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'cancancan'
 
 gem 'devise'
+
+gem 'active_model_serializers', '~> 0.10.13'
